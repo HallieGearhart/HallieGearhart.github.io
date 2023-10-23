@@ -198,14 +198,27 @@ button:hover {
     color: #4caf50;
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
-    header {
-        padding: 0.5rem 0;
-    }
+@media (min-width: 600px) { 
+		header { 	padding-left: 0; 
+				text-align: center; }
+		h1        { font-size: 3em; }	
+		nav ul   { 	flex-flow: row nowrap;
+				justify-content: space-around; }
+		nav li    { 	border-bottom: none; }    
+		#mobile   { display: none; }
+		#desktop { display: inline; }
+		h4 { margin-left: 10%; 
+		    margin-right: 10%; }
+		form { width: 40%; display: grid; grid-gap: 1em; grid-template-columns: 6em 1fr; }
+		input[type="submit"] { grid-column: 2 / 3; width: 9em}
 }
-
-@media (max-width: 767px) {
-    header {
-        padding: 0.3rem 0;
-    }
+@media (min-width: 1024px) { 
+		@supports (display: grid) {
+		   header { grid-area: header; }	
+		   nav      { grid-area: nav; }
+		   main    { grid-area: main; }		
+		   footer  { grid-area: footer; }		
+		nav ul { flex-direction: column; }	
+        header {  background-image: url(logo.jpg); }			
+   }
 }
