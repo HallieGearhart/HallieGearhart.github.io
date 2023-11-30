@@ -123,9 +123,8 @@ nav ul li a:hover {
 }
 
 .featured-recipes .bangbangshrimp img {
-    width: 650px;
-    height: 400px;
-    object-fit: cover;
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
     margin-bottom: 10px;
 }
